@@ -1,0 +1,15 @@
+table{
+    height:300px;
+    width: 400px;
+    margin:auto; 
+    border-collapse: collapse;
+}
+td{
+    border:1px solid black;
+    text-align:center;
+    width: 100px;
+}
+.aaa{
+    color: rgb(100, 179, 26);
+    font-size: 1.2em;
+}
