@@ -1,0 +1,50 @@
+a{
+    text-decoration: none;
+    color: seashell;
+}
+.container > li{
+    list-style: none;
+    font-size: 1.5em;
+    /* border: 1px solid yellow; */
+    padding: 3px 12px;
+    margin: 3px 12px;
+    /* color: seashell; */
+}
+/* hover 선택자는 마우스가 올라 갔을때 */
+.container > li:hover{
+    background-color: rgb(121, 26, 9);
+    border-radius: 3px;
+}
+.container {
+    background-color: rgb(19, 11, 5);
+   display: flex;
+   padding: 12px 15px;
+   justify-content: center;
+}
+/* 반응형으로 레이아웃 만들기
+해상도 최대 768px 까지 동작하도록 설정 */
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }    
+    .container > li {
+        text-align: center;
+    }
+}
+/* 마진과 마진이 만났을 때 마지 상쇄경우 */
+html,body {
+    height: 100%;
+}
+.map_wrap {
+    display: flex;
+	flex-direction: column;
+	height: 100%;	
+}
+.footer {
+    border-top: 3px solid tomato;
+    font-size: 1 em;
+}
+.footer a,p {
+    font-size: 12px;
+    color:brown;
+}
