@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>전구 테스트</title>
+</head>
+<body>
+    <h2>전구 테스트</h2>
+    <p>HTML 태그의 속성값 변경하기 :img 태그의 이미지 파일명을 지정하는 src 속성값을 변경하는 예제입니다.</p>
+    <p>HTML 태그의 style값 변경하기 : em 태그의 텍스트 스타일 color 값을 변경하는 예제 입니다.</p>
+    <p>전구를 클릭해보세요 현재상태:<em id="state" style ="color:green;">ON</em></p>
+    
+    <button onclick="bulbON()">on</button>
+        <img src="../images/pic_bulbon.gif" alt="light" style="width:50px;cursor:pointer;" id="myImage"
+                                            onclick="bulbToggle()">
+    <button onclick="bulbOFF()">off</button>
+    
+    <button onclick="document.getElementById('myImage2').src='../images/ab.jpg'">죄송함다!!</button>
+        <img id="myImage2" src="../images/ab.jpg" style="width:100px">
+    <button onclick="document.getElementById('myImage2').src='../images/abab.jpg'">뭔데뭐야~!?</button>
+
+    <script>
+        let state=1; //전역 변수 선언 1이면 on , 2이면 off
+        const img = document.getElementById('myImage'); //태그 요소를 가져와 변수로 참조.const는 값의 변경을 안할 때 사용합니다
+        const onoff = document.getElementById('state');
+        function bulbToggle(){
+            if(state==1){
+                bulbOFF();
+                state=0;
+            }else{
+                bulbON();
+                state=1;
+            }
+        }
+        function bulbON(){
+            img.src = '../images/pic_bulbon.gif';
+            onoff.style.color = 'green';
+            onoff.innerHTML='ON';
+        }
+        function bulbOFF(){
+            document.getElementById('myImage').src = '../images/pic_bulboff.gif';
+            onoff.style.color = 'red';
+            document.getElementById('state').innerHTML='OFF';
+        }
+    </script>
+
+
+</body>
+</html>
